@@ -1,10 +1,10 @@
 public class CreditPaymentService {
-    public double calculate(double s, double m) {
-        double monthlyPayment = s * 0.08325 / (1 - (1 / (1 + 0.08325)) m );
-        return monthlyPayment;
+    public double calculate(int credit, int time, double percent) {
+        double creditRate = percent / 12 / 100;     // ставка в месяц
+        double degree = Math.pow(1 + x, time); // степень
+        double annuity = creditRate * degree / (degree-1);        // аннуитет
+        double payment = annuity * credit;
+        return payment;
     }
+
 }
-//
-//Pmt = s * 9.99% / [ 1 - (1 / (1 + 9.99%) )m ]
-//
-//где s - сумма кредита,  n - количество месяцев, на которое берется кредит
